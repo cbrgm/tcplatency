@@ -1,7 +1,7 @@
 # go settings
 GOFLAGS := -mod=vendor
 GO := GOFLAGS=$(GOFLAGS) GO111MODULE=on CGO_ENABLED=0 go
-GOTEST := GOFLAGS=$(GOFLAGS) GO111MODULE=on CGO_ENABLED=0 go # -race needs cgo
+GOTEST := GOFLAGS=$(GOFLAGS) GO111MODULE=on CGO_ENABLED=1 go # -race needs cgo
 
 PACKAGES = $(shell go list ./... | grep -v /vendor/)
 

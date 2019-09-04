@@ -18,7 +18,7 @@ steps:
       GO111MODULE: on
       GOPROXY: https://proxy.golang.org
     commands:
-      - apk add -U git make
+      - apk add -U git make build-base
       - make check-vendor
       - make fmt
       - make test
