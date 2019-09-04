@@ -1,7 +1,5 @@
 # go settings
-GOFLAGS := -mod=vendor
-GO := GOFLAGS=$(GOFLAGS) GO111MODULE=on CGO_ENABLED=0 go
-GOTEST := GOFLAGS=$(GOFLAGS) GO111MODULE=on CGO_ENABLED=1 go # -race needs cgo
+GO := GO111MODULE=on CGO_ENABLED=0 go
 
 PACKAGES = $(shell go list ./... | grep -v /vendor/)
 
@@ -35,7 +33,7 @@ fmt:
 
 .PHONY: test
 test:
-	$(GOTEST) test -cover -coverprofile coverage.out -race -v ./...
+	@for PKG in $(PACKAGES); do $(GO) test -cover -coverprofile $$GOPATH/src/$$PKG/coverage.out $$PKG || exit 1; done;
 
 .PHONY: build
 build: cmd/tcplatency
