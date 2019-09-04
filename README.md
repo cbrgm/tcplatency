@@ -1,4 +1,8 @@
-# tcplatency
+# tcplatency [![Build Status](https://drone.cbrgm.net/api/badges/cbrgm/tcplatency/status.svg)](https://drone.cbrgm.net/cbrgm/tcplatency)
+
+[![](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](https://github.com/cbrgm/tcplatency/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/cbrgm/tcplatency)](https://goreportcard.com/report/github.com/cbrgm/tcplatency)
+[![](https://img.shields.io/github/release/cbrgm/tcplatency.svg)](https://github.com/cbrgm/tcplatency/releases)
 
 tcplatency provides an easy way to measure network latency using TCP.
 
@@ -6,8 +10,8 @@ tcplatency was created out of necessity to perform network diagnostics and troub
 ## Features
 - Runs as a command line tool or can be used as a library in other projects
 - Custom parameters for a port, runs, timeout and wait time between runs
-- IPv4 (e.g 52.26.14.11) and fqdn domain (e.g google.com) host support
-- Small and extensible.
+- IPv4 (e.g 192.168.178.22) and dns (e.g google.com) host support
+- Small and extensible
 
 ## Usage
 `tcplatency` can be used both as a module and as a standalone script.
