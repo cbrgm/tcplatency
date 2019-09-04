@@ -19,6 +19,7 @@ steps:
       GOPROXY: https://proxy.golang.org
     commands:
       - apk add -U git make
+      - make check-vendor
       - make fmt
       - make test
       - make build
