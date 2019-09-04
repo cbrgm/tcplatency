@@ -1,4 +1,3 @@
-# go settings
 GO := GO111MODULE=on CGO_ENABLED=0 go
 
 PACKAGES = $(shell go list ./... | grep -v /vendor/)
