@@ -126,6 +126,7 @@ func appAction(c *cli.Context) error {
 
 		if tcp.Failed {
 			fmt.Printf("%s via tcp seq=%d port=%d timeout=%d failed \n", tcp.Host, tcp.Sequence, tcp.Port, tcp.Timeout)
+			continue
 		}
 		fmt.Printf("%s via tcp seq=%d port=%d timeout=%d time=%.2f ms \n", tcp.Host, tcp.Sequence, tcp.Port, tcp.Timeout, tcp.Latency)
 	}
