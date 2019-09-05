@@ -13,6 +13,10 @@ tcplatency was created out of necessity to perform network diagnostics and troub
 - IPv4 (e.g 192.168.178.22) and dns (e.g google.com) host support
 - Small and extensible
 
+## Install
+
+You can find the latest releases [here](https://github.com/cbrgm/tcplatency/releases).
+
 ## Usage
 `tcplatency` can be used both as a module and as a standalone script.
 
